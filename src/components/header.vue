@@ -7,7 +7,7 @@
 					<div class="header__h1">{{ 'Make me up!' }}</div>
 					<div class="header__nav">
 						<router-link 
-							to="/matches" 
+							to="/" 
 							class="header__nav-button" 
 							exact-active-class="header__nav-button nav-button--active"
 							>
