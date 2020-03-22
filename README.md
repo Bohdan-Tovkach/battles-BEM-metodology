@@ -1,6 +1,4 @@
-# star-ladder-task
-
-# live example on hosting - 
+## live example on hosting - https://elastic-wing-322e2c.netlify.com/
 
 ## Project setup
 ```
