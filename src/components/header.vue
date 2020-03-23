@@ -7,16 +7,14 @@
 					<div class="header__h1">{{ 'Make me up!' }}</div>
 					<div class="header__nav">
 						<router-link 
-							to="/" 
+							to="/matches/" 
 							class="header__nav-button" 
-							exact-active-class="header__nav-button nav-button--active"
 							>
 							{{ 'matches' }}
 						</router-link>
 						<router-link 
-							to="/battles" 
+							to="/battles/" 
 							class="header__nav-button" 
-							exact-active-class="header__nav-button nav-button--active"
 							>
 							{{ 'battles' }}
 						</router-link>
@@ -33,6 +31,6 @@ import headerLogo from '../assets/header-logo.vue'
 export default {
 	components: {
 		headerLogo,
-	},
+	}
 }
 </script>

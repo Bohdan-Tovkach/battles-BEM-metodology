@@ -11,7 +11,7 @@ import headerView from './components/header.vue'
 export default {
 	components: {
 		headerView
-	}
+	},
 }
 </script>
 
@@ -280,14 +280,25 @@ export default {
 		width: 62px; 
 		height: 15px;
 	}
-	/* 
-		Extra small devices (portrait phones, less than 576px)
-		@media (max-width: 575.98px) {  }
-		Small devices (landscape phones, less than 768px)
-		@media (max-width: 767.98px) {	}
-		Medium devices (tablets, less than 992px)
-		@media (max-width: 991.98px) {  }
-		Large devices (desktops, less than 1200px)
-		@media (max-width: 1199.98px) {  }
-	*/
+	.view-match {
+		padding: 25px;
+		display: flex;
+		justify-content: center;
+		width: 70%;
+		min-height: 560px;
+		background: #FFFFFF;
+		border: 1px solid rgba(143, 154, 157, 0.2);
+		box-sizing: border-box;
+		box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+		border-radius: 2px;
+		font-family: Roboto;
+		text-align: center;
+	}
+	.match-section {
+		width: 100%;
+		height: 50em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 </style>

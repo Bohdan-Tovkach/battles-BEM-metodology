@@ -1,10 +1,9 @@
 <template>
 	<section class="section">
-		<div class="section__card" 
+		<router-link to="/battles/battle" tag="div" class="section__card" 
 			v-for="(val, key) in battles"
 			:key="key"
 			:style="cardBorder(val)" 
-			@click="val.isPlayed ? watcMatch(val): false"
 			>
 			<card-played-logo v-if="val.isPlayed" class="section__card-logo" />
 			<card-waiting-logo v-if="val.isWaiting" class="section__card-logo" />
@@ -59,7 +58,7 @@
 					<div class="section__card-reselt-time">{{ val.stat }}</div>
 				</div>
 			</div>
-		</div>
+		</router-link>
 	</section>
 </template>
 
@@ -109,12 +108,6 @@ export default {
 		cardBorder(val) {
 			return val.isPlayed ? 'border: 1px solid #EA5656; cursor: pointer;' : ''
 		},
-		watcMatch(val) {
-			let matchPath = `${this.$router.currentRoute.path}
-				/${val.participants[0].name.split(' ').join('_')}
-				-${val.participants[1].name.split(' ').join('_')}`
-			this.$router.push({path: matchPath})
-		}
 	}
 }
 </script>
