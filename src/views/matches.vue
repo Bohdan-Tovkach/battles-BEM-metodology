@@ -4,6 +4,7 @@
 			v-for="(val, key) in matches"
 			:key="key"
 			:style="cardBorder(val)"
+			@click.native.prevent.capture="clicked(val)"
 			>
 			<card-played-logo v-if="val.isPlayed" class="section__card-logo" />
 			<card-waiting-logo v-if="val.isWaiting" class="section__card-logo" />
@@ -112,6 +113,9 @@ export default {
 		cardBorder(val) {
 			return val.isPlayed ? 'border: 1px solid #EA5656; cursor: pointer;' : ''
 		},
+		clicked(val) {
+			if(val.isPlayed) this.$router.push('/matches/match')
+		}
 	},
 }
 </script>
